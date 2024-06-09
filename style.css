@@ -1,0 +1,162 @@
+/*Reset Default CSS Style*/
+
+ul{
+    list-style: none;
+    padding: 0;
+  }
+  
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar{
+    justify-content: center;
+}
+
+/*Buttons Navbar*/
+.list-buttons{
+    margin: 10px;    
+    gap: 20px;
+    overflow-x: visible;
+}
+
+.add_button{
+    color: black;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: backgroud-color 0.25s;
+}
+
+/*Center all content*/
+.flux{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.card{
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 10;
+    border-radius: 50%;
+    color: #fff;
+    border-color: transparent;
+}
+
+.card:hover{
+    width: 400px;
+    height: 450px;
+    border-radius: 5px;
+    color: #fff;
+
+}
+
+/*CSS border effect*/
+.card .lines{
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .lines{
+    border-radius: 5px;
+}
+
+.card .lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    transform: translate (-50%,50%);
+    background: linear-gradient(transparent,#45f3ff,#45f3ff,#45f3ff,transparent);
+    animation: animate 4s linear infinite;
+}
+
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%
+    {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }    
+}
+
+.card .lines::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #a3304e;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.female .lines::before{
+    background: #ff2b64;
+}
+
+.female .lines::after{
+    background: #a3304e;
+}
+
+.male .lines::before{
+    background: #149cf1;
+}
+
+.male .lines::after{
+    background: #003658;
+}
+
+.card:hover .lines::after{
+    border-radius: 5px;
+    
+}
+
+
+/*Center photo*/
+.card .profil{
+    width: 150px;
+    height: 150px;
+}
+
+.card .profil img{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: calc(100% -10px);
+    height: calc(100% -10px);
+    border-radius: 50%;    
+}
+
+
+.card p{
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+
+.card .details{
+    width: 100%;
+    height: 100%;    
+    z-index: 10;
+}
+
+
+@media (min-width: 500px){
+    .flux{
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+}
