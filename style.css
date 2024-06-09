@@ -98,7 +98,6 @@ a{
     content: '';
     position: absolute;
     inset: 3px;
-    background: #a3304e;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
     
